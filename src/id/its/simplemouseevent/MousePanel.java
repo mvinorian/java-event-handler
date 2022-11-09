@@ -1,4 +1,4 @@
-package com.event.mouse;
+package id.its.simplemouseevent;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -52,13 +52,14 @@ public class MousePanel extends JPanel implements MouseListener, MouseMotionList
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        this.isDragged = false;
         this.text = "Mouse released on X: " + e.getX() + " Y: " + e.getY();
         this.repaint();
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        this.text = "Mouse enetered JPanel";
+        this.text = "Mouse entered JPanel";
         this.repaint();
     }
 
